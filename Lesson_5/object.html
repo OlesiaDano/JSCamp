@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objectt</title>
+</head>
+<body>
+    <script>
+        const wallet = {
+            userName: "Olesia",
+            bitcoin: {
+                name: "bitcoin",
+                logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1.png' alt='bitcoin' />",
+                exchangeRate: 30402.27,
+                coins: 3,
+            },
+            etheurum: {
+                name: "etheurum",
+                logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png' alt='bitcoin' />",
+                exchangeRate: 2068.74,
+                coins: 5,
+            },
+            stellar: {
+                name: "stellar",
+                logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/512.png' alt='bitcoin' />",
+                exchangeRate: 0.1372,
+                coins: 6,
+            },
+            show: function(x) {
+                document.write("<p> Hello, your ballance is " + wallet[x].coins + " " + wallet[x].name + " " + wallet[x].logo);
+                document.write("<p> If you'll exchange them today, you'll gain " + wallet[x].coins*wallet[x].exchangeRate);
+            }
+        }
+
+        wallet.show("etheurum");
+
+    </script>
+</body>
+</html>
